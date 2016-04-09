@@ -17,6 +17,8 @@ DogeDodge.Play.prototype = {
 
 
  create: function() {
+   game.physics.startSystem(Phaser.Physics.ARCADE);
+
    //background
    this.background = this.add.tileSprite(0,0,320,568,"background");
    this.background.autoScroll(0,-50);
@@ -30,6 +32,8 @@ DogeDodge.Play.prototype = {
    this.ship.animations.add('fire');
    this.ship.animations.play('fire',2,true);
    this.cursors = game.input.keyboard.createCursorKeys();
+   game.physics.arcade.enable(this.ship);
+   this.ship.body.collideWorldBounds = true;
    //missle
 
    this.missle = this.add.sprite(160,0,'missle')
