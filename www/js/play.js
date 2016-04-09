@@ -13,6 +13,7 @@ DogeDodge.Play.prototype = {
    this.load.image('background','assets/sprites-backgrounds/background2.png');
    this.load.spritesheet('ship','assets/sprites-backgrounds/ship2.png',65,65,4);
    this.load.spritesheet('missle','assets/sprites-backgrounds/missle2.png',32,32,4);
+   var timer;
   },
 
 
